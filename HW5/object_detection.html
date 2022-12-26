@@ -1,0 +1,42 @@
+<!-- from -->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object detection</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
+  </head>
+  <body>
+    <!------------------------------------ -->
+    <img id="image_chi" alt="cat" src="chihuahua.jpg"/>
+    <!-- <img id="image_muffin" alt="cat" src="muffin.jpg"/> -->
+    <!-- <img id="image_corgi" alt="cat" src="corgi.jpg"/> -->
+    <!------------------------------------ -->
+
+    <script>
+      const img_chi = document.getElementById('image_chi');
+      // const img_muffin = document.getElementById('image_muffin');
+      // const img_corgi = document.getElementById('image_corgi');
+
+      const predictImage = async () => {
+        console.log("Model loading...");
+        const model = await mobilenet.load();
+        console.log("Model is loaded!")
+
+        const predictions_chi = await model.classify(img_chi);
+        // const predictions_muffin = await model.classify(img_muffin);
+        // const predictions_corgi = await model.classify(img_corgi);
+        // console.log('Predictions: ', predictions);
+        alert('Predictions: '+ JSON.stringify(predictions_chi) );
+        // alert('Predictions: '+ JSON.stringify(predictions_corgi));
+        // + 'Predictions: ' + JSON.stringify(predictions_muffin)
+
+      }
+      predictImage();
+    </script>
+  </body>
+</html>
