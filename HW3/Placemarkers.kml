@@ -1,0 +1,168 @@
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="redLineBluePoly">
+<LineStyle>
+<color>ff0000ff</color>
+</LineStyle>
+<PolyStyle>
+<color>ffff0000</color>
+</PolyStyle>
+</Style>
+<Style id="z1">
+<IconStyle>
+<Icon>
+<href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+</Icon>
+</IconStyle>
+</Style>
+<Style id="transRedPoly">
+<LineStyle>
+<width>1.5</width>
+</LineStyle>
+<PolyStyle>
+<color>7d0000ff</color>
+</PolyStyle>
+</Style>
+<Placemark>
+<name>USC Gateway</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.2842718,34.0253252</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>At-T Gateway</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.29177634,34.0222763</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Museum Entrance</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.2887445,34.017587</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Black Fountain</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.2835631,34.0223087</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Doheny Fountain</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.2844524,34.020494</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Viterbi Fountain</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.2889796,34.0204612</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Leavey Library</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.2827704,34.0213601</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Donheny Library</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.2845113,34.0203903</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Topping Library</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.2877003,34.0194272</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Starbucks</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.2825904,34.021899</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Panda Express</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.2864075,34.0202746</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Taco bell</name>
+<styleUrl>#z1</styleUrl>
+<Point>
+<coordinates>-118.2918626,34.02250031</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>ConvexHull</name>
+<styleUrl>#transRedPoly</styleUrl>
+<Polygon>
+<extrude>1</extrude>
+<altitudeMode>relativeToGround</altitudeMode>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates> 
+-118.2887445,34.017587,17
+-118.29177634,34.0222763,17
+-118.2918626,34.02250031,17
+-118.2842718,34.0253252,17
+-118.2825904,34.021899,17
+-118.2827704,34.0213601,17
+-118.2887445,34.017587,17
+</coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</Placemark>
+<Placemark>
+<name>Nearest Neighbour 1</name>
+<styleUrl>#redLineBluePoly</styleUrl>>
+<visibility>1</visibility>
+<LineString>
+<tessellate>0</tessellate>
+<coordinates> -118.2799699,34.0282653,0 -118.2842718,34.0253252,0 </coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Nearest Neighbour 2</name>
+<styleUrl>#redLineBluePoly</styleUrl>>
+<visibility>1</visibility>
+<LineString>
+<tessellate>0</tessellate>
+<coordinates> -118.2799699,34.0282653,0 -118.2825904,34.021899,0 </coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Nearest Neighbour 3</name>
+<styleUrl>#redLineBluePoly</styleUrl>>
+<visibility>1</visibility>
+<LineString>
+<tessellate>0</tessellate>
+<coordinates> -118.2799699,34.0282653,0 -118.2835631,34.0223087,0 </coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Nearest Neighbour 4</name>
+<styleUrl>#redLineBluePoly</styleUrl>>
+<visibility>1</visibility>
+<LineString>
+<tessellate>0</tessellate>
+<coordinates> -118.2799699,34.0282653,0 -118.2827704,34.0213601,0 </coordinates>
+</LineString>
+</Placemark>
+</Document>
+</kml>
