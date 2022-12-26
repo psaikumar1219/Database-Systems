@@ -1,0 +1,36 @@
+Entities: 
+Owners, Students, Classes, Rooms, Projects, Software, Instuctor, Library, Hourly Rate, Tables, Online Suppliers, Parts
+
+Relations: 
+Create Classes, Create Projects, Assign Classes, Assign Projects, ClassRoom, ProjectRoom, Used Softwares, Class Info, Rating, Project Supervision, Project Specification, Purchase.
+
+
+
+1. "Owners" table consists of all the owners. "Create Classes" table consist of association between classes and owners. It is used to get which class is created by which owner or gourp of owners. [One Class created by one or many Owners]. "Create Projects" table consist of association between owners and projects. It is used to get which project is created by which owner or gourp of owners. [One Project created by one or Many Owners]
+
+2. "Purchase" is an association between "Online Suppliers", "Parts" and "Owner". This is used to determine which onwer has ordered which particular part from which supplier. [Part is odered from a particular supplier by a particular owner][Owner can order multiple parts][Multiple parts can be ordered from single supplier]
+
+3. "Assign Classes" is association between "Students" and "Classes" table, where we can find infomration of which student choosed which course. Rating is used to store a particular students rating to a class he is enrolled into. [One Class contains Many Students] [One Student can choose many classes].
+
+4. Each class can be taught using multiple softwares. "Used Softwares" is association used between "Classes" and "Softwares", where we can find softwares used for each class. [One class can be taught using multiple softwares].
+
+5. "Assign Projects" is association between "Projects" and "Classes" table, where we can find infomration of which student choosed which course. Rating is used to store a particular students rating to a project he worked on. [One Project contains Many Students] [One Student can choose many projects].
+
+6. "ClassRooms" is association between "Rooms" and "Classes" to determine which room is allocated for a particular class. Start time and end time determine the duration of class in that particular room. [One class is associated with one room] [One room is associated with multiple classes]
+
+7. "ProjectRooms" is association between "Rooms" and "Projects" to determine which room is allocated for a particular project. Start time and end time determine the duration of project in that particular room. [One project is associated with one room] [One room is associated with multiple projects] {Relation between "Project Room" and "Rooms" is not connected due to large distance between entities in ER diagram}
+
+8. "Class Info" is an association between "Instructors", "Classes" and "Library" tables. It is used to determine number of instrucotrs teaching a class and their preferable textbook used for a class. Hours attribute determine the time each professor teaches a particular class. [One class is taught by many professors] [One professor teaches only one class] [One book is referred for aprticular class] [A class can be taught using multiple books].
+
+9. "Hourly Rate" is an independent entity soring values of hourly pay for different type of job roles. example teaching and supervising.
+
+10. "Rating" table is used to store rating given by a student to a particular professor. [One student can rate multiple professors] [Many students can rate a single professor].
+
+11. "Project Supervision" is an association between "Projects" and "Instructors" used to determine a particular project is supervised by a particular professor. [One project is supervised by one professor][One professor supervises one project].
+
+12. "Tables" entity contains different tables present in a room. "ProjectRoomId" attribute determines which particular room the tables belong to and can also determine for which particular project the tables are used by using "Project Room" assoication. 
+
+13. "Project Specification" is an association between "Parts", "Assign Projects" and "Tables". This association is used to determine the table used by a particular project, all the parts used by a particular project, the group of students part of a particular project. [Many parts are used for a project][One table is used for a project][Many students are part of single project][A student can be a part of multiple projects].
+
+14. "isDamaged" attribute in "Parts" table determine whether a particular part is damaged or not. It also contains "Cost" attribute determing the cost of the part. { I am considering to fine all the students involved in a particular project which used the part. This can determined using "Project Specification" and "Assign Projects" assocications. }
+
